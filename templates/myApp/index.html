@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+</head>
+<body>
+    <p><a href="{% url 'post_list' %}">post_list</a></p>
+    <h2>{{insert3}}</h2>
+    <h1>This is a test of the Jermain network coming from the html.</h1>
+    <h2>{{insert2}}</h2>
+
+    <h2>{{insert}}</h2>
+    <img src="{% static "images/planet.jpeg" alt="Photo link broken" %}">
+</body>
+</html>

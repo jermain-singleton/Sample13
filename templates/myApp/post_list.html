@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Post List</title>
+
+</head>
+<body>
+    <p><a href="{% url 'index' %}">Index</a>-<a href="{% url 'post_new' %}">New Post</a></p>
+    
+    <H1>POST LIST</H1>
+    {% if post %}
+    <ol>
+    {% for p in post %}
+    <li>POST************POST</li>
+    <ul>
+        <li>{{p.poster}}</li>
+        <li>{{p.created}}</li>
+        <li>{{p.postname}}</li>
+        <li>{{p.post}}</li>
+    </ul>
+    {% endfor %}
+    </ol>
+    {% else %}
+    <h2>There are no current Post</h2>
+    {% endif %}
+
+    <img src="{% static "images/fox.png" alt="photo no showing"%}"
+
+</body>
+</html>
